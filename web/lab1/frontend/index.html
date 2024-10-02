@@ -1,0 +1,157 @@
+<html>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+<!--<script src="https://cdn.tailwindcss.com"></script>-->
+<meta charset="utf-8">
+<body>
+<!--
+Шапка, содержащая ФИО, номер группы и номер варианта. Шапка - Шрифт Fantasy [x]
+Отступы *элементов ввода* должны задаваться в процентах
+
+-->
+<header class="header">
+    <p>Торениязов Арман Ажинияз улы, Р3223, вариант 23474678</p>
+</header>
+<main class="main">
+    <div class="section">
+        <form method="POST" action="http://localhost:8080/fcgi-bin/server.jar">
+            <div class="selector">
+                <p>X</p>
+                <label class="checkboxes">
+                    <label>
+                        -4
+                        <input name="x" value="-4" type="radio" required>
+                    </label><br>
+                    <label>
+                        -3
+                        <input name="x" value="-3" type="radio">
+                    </label><br>
+                    <label>
+                        -2
+                        <input name="x" value="-2" type="radio">
+                    </label><br>
+                    <label>
+                        -1
+                        <input name="x" value="-1" type="radio">
+                    </label><br>
+                    <label>
+                        0
+                        <input name="x" value="0" type="radio">
+                    </label><br>
+                    <label>
+                        1
+                        <input name="x" value="1" checked="checked" type="radio">
+                    </label><br>
+                    <label>
+                        2
+                        <input name="x" value="2" type="radio">
+                    </label><br>
+                    <label>
+                        3
+                        <input name="x" value="3" type="radio">
+                    </label><br>
+                    <label>
+                        4
+                        <input name="x" value="4" type="radio">
+                    </label>
+                </label>
+            </div>
+            <div class="selector">
+                <p>Y</p>
+                <label>
+                    <input name="y" type="number" min="-3" max="3" value="1" required>
+                </label>
+            </div>
+            <div class="selector">
+                <p>R</p>
+                <div class="checkboxes">
+                    <label>
+                        1
+                        <input name="r" value="1" checked="checked" type="radio" required>
+                    </label>
+                    <label>
+                        2
+                        <input name="r" value="2" type="radio">
+                    </label>
+                    <label>
+                        3
+                        <input name="r" value="3" type="radio">
+                    </label>
+                    <label>
+                        4
+                        <input name="r" value="4" type="radio">
+                    </label>
+                    <label>
+                        5
+                        <input name="r" value="5" type="radio">
+                    </label>
+                </div>
+            </div>
+            <label>
+                <input id="submit-btn" type="submit"/>
+            </label>
+        </form>
+    </div>
+    <div class="section">
+        <div class="axis-box">
+            <div class="canvas-block">
+                <canvas id="canvas1"></canvas>
+                <canvas id="canvas2"></canvas>
+                <canvas id="canvas3"></canvas>
+            </div>
+            <div class="axis-block">
+                <div class="axis x">
+                    <div class="stick invisible"></div>
+                    <div class="stick">
+                        <p class="mark">R</p>
+                    </div>
+                    <div class="stick">
+                        <p class="mark">R/2</p>
+                    </div>
+                    <div class="stick"></div>
+                    <div class="stick">
+                        <p class="mark">-R/2</p>
+                    </div>
+                    <div class="stick">
+                        <p class="mark">-R</p>
+                    </div>
+                    <div class="stick invisible"></div>
+                </div>
+                <div class="axis y">
+                    <div class="stick invisible"></div>
+                    <div class="stick">
+                        <p class="mark rotated">R</p>
+                    </div>
+                    <div class="stick">
+                        <p class="mark">R/2</p>
+                    </div>
+                    <div class="stick"></div>
+                    <div class="stick">
+                        <p class="mark">-R/2</p>
+                    </div>
+                    <div class="stick">
+                        <p class="mark">-R</p>
+                    </div>
+                    <div class="stick invisible"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="section">
+        <table class="rows">
+            <tr class="columns">
+                <th class="col">Время</th>
+                <th class="col">Попал</th>
+                <th class="col">Потрачено нс</th>
+            </tr>
+        </table>
+    </div>
+</main>
+<footer class="footer">
+    <img class="avatar" src="https://i.ibb.co/dpYPXMC/avatar.jpg">
+    <p>сделано с ♥ в ИТМО</p>
+    <p>2024</p>
+</footer>
+</body>
+</html>

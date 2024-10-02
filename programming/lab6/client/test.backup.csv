@@ -1,0 +1,4 @@
+key,name,creationDate,coordinate_x,coordinate_y,from_x,from_y,from_z,from_name,to_x,to_y,to_z,to_name,distance
+1,Route1,15-01-23,10.1234,20,30,15.4321,25.8765,CityA,40,50.5678,60.9876,CityB,100.5
+3,Route3,25-03-23,12.3456,22,32,17.9876,27.5432,CityE,42,52.6789,62.9876,CityF,120.3
+4,Route2,20-02-23,11.1111,21,31,16.4444,26.5555,CityC,41,51.2222,61.3333,CityD,110.7

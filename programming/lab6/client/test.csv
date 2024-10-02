@@ -1,0 +1,4 @@
+key,name,creationDate,coordinate_x,coordinate_y,from_x,from_y,from_z,from_name,to_x,to_y,to_z,to_name,distance
+10,10,24-02-26,10.0,10,10,10.0,10.0,10,10,10.0,10.0,10,10.0
+4,",24-02-17,1.0,1,1,1.0,1.0,1,1,1.0,1.0,1,3.0
+3,name,25-03-23,12.3456,22,32,17.9876,27.5432,CityE,42,52.6789,62.9876,CityF,120.3

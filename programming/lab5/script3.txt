@@ -1,0 +1,15 @@
+insert 234567
+name
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+execute_script script1.txt
+show

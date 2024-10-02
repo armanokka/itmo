@@ -1,0 +1,4 @@
+execute_script script1.txt
+info
+execute_script script3.txt
+show
