@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:my="http://xmlns.jcp.org/jsf/composite/mycomponents"
+>
+<my:head title="Торениязов Арман Ажинияз улы"/>
+<body>
+<my:header title="Торениязов Арман Ажинияз улы, Р3223, вариант 33564"/>
+<main class="main">
+    <div class="section">
+        <div class="selector navigation-button-block">
+            <div class="selector_inner">
+                <h:link value="Return to index" styleClass="navigation-button text-gradient" outcome="goToIndex">
+                </h:link>
+            </div>
+        </div>
+        <h:form>
+            <h:inputHidden id="x" name="x" type="number" value="#{xCoordinateBean.x}">
+            </h:inputHidden>
+            <h:inputHidden id="y" name="y" type="number" value="#{yCoordinateBean.y}">
+            </h:inputHidden>
+            <div class="selector">
+                <div class="selector_inner">
+                    <p>R</p>
+                    <div class="checkboxes">
+                        <h:selectOneRadio id="r" value="#{rCoordinateBean.r}" required="true">
+                            <f:selectItem itemValue="1" itemLabel="1"/>
+                            <f:selectItem itemValue="2" itemLabel="2"/>
+                            <f:selectItem itemValue="3" itemLabel="3"/>
+                            <f:selectItem itemValue="4" itemLabel="4"/>
+                            <f:selectItem itemValue="5" itemLabel="5"/>
+                        </h:selectOneRadio>
+                    </div>
+                </div>
+            </div>
+            <h:commandButton styleClass="hidden" id="submit-btn" value="Check"
+                             actionListener="#{resultsControllerBean.addResult(xCoordinateBean.x, yCoordinateBean.y, rCoordinateBean.r)}">
+            </h:commandButton>
+        </h:form>
+    </div>
+
+    <div class="section">
+        <div class="axis-box">
+            <div class="canvas-block">
+                <canvas id="canvas1"/>
+                <canvas id="canvas2"/>
+                <canvas id="canvas3"/>
+            </div>
+            <div class="axis-block">
+                <div class="axis x">
+                    <span class="stick invisible"/>
+                    <div class="stick"><p class="mark">R</p></div>
+                    <div class="stick"><p class="mark">R/2</p></div>
+                    <span class="stick"/>
+                    <div class="stick"><p class="mark">-R/2</p></div>
+                    <div class="stick"><p class="mark">-R</p></div>
+                    <span class="stick invisible"/>
+                </div>
+                <div class="axis y">
+                    <span class="stick invisible"/>
+                    <div class="stick"><p class="mark rotated">R</p></div>
+                    <div class="stick"><p class="mark">R/2</p></div>
+                    <span class="stick"/>
+                    <div class="stick"><p class="mark">-R/2</p></div>
+                    <div class="stick"><p class="mark">-R</p></div>
+                    <span class="stick invisible"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="horizontal">
+            <p class="text-gradient">X</p>
+            <p class="text-gradient">Y</p>
+            <p class="text-gradient">R</p>
+            <p class="text-gradient">Попал</p>
+        </div>
+        <h:dataTable captionClass="rows" styleClass="rows" id="results-table" value="#{resultsControllerBean.results}"
+                     var="result">
+            <h:column styleClass="col">
+                <h:outputText value="${result.x}"/>
+            </h:column>
+            <h:column styleClass="col">
+                <h:outputText value="${result.y}"/>
+            </h:column>
+            <h:column styleClass="col">
+                <h:outputText value="${result.r}"/>
+            </h:column>
+            <h:column styleClass="col">
+                <h:outputText value="${result.result}"/>
+            </h:column>>
+        </h:dataTable>
+        <div class="horizontal">
+            <span class="loading-circle"/>
+            <span class="loading-circle"/>
+            <span class="loading-circle"/>
+            <span class="loading-circle"/>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="scroll">
+        <div class="scroll-container">
+            <div class="scroll-element color1">сделано</div>
+            <div class="scroll-element color2">в</div>
+            <div class="scroll-element color3 background-gradient">ИТМО</div>
+            <div class="scroll-element color1">специально</div>
+            <div class="scroll-element color2">для</div>
+            <div class="scroll-element color3">Миху</div>
+            <div class="scroll-element color1">Вадима</div>
+            <div class="scroll-element color2">Дмитриевича</div>
+            <div class="scroll-element color3">2024</div>
+            <div class="scroll-element color1">сделано</div>
+            <div class="scroll-element color2">в</div>
+            <div class="scroll-element color3 background-gradient">ИТМО</div>
+            <div class="scroll-element color1">специально</div>
+            <div class="scroll-element color2">для</div>
+            <div class="scroll-element color3">Миху</div>
+            <div class="scroll-element color1">Вадима</div>
+            <div class="scroll-element color2">Дмитриевича</div>
+            <div class="scroll-element color3">2024</div>
+        </div>
+    </div>
+</footer>
+
+<h:outputScript name="script.js"/>
+<h:outputScript name="timer.js"/>
+</body>
+</html>
+

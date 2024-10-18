@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="3.0" xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                                  https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_3_0.xsd">
+
+<!--    <managed-bean>-->
+<!--        <managed-bean-name>xCoordinateBean</managed-bean-name>-->
+<!--        <managed-bean-class>example.beans.XCoordinateBean</managed-bean-class>-->
+<!--        <managed-bean-scope>session</managed-bean-scope>-->
+<!--    </managed-bean>-->
+
+<!--    <managed-bean>-->
+<!--        <managed-bean-name>yCoordinateBean</managed-bean-name>-->
+<!--        <managed-bean-class>example.beans.YCoordinateBean</managed-bean-class>-->
+<!--        <managed-bean-scope>session</managed-bean-scope>-->
+<!--    </managed-bean>-->
+
+<!--    <managed-bean>-->
+<!--        <managed-bean-name>rCoordinateBean</managed-bean-name>-->
+<!--        <managed-bean-class>example.beans.RCoordinateBean</managed-bean-class>-->
+<!--        <managed-bean-scope>session</managed-bean-scope>-->
+<!--    </managed-bean>-->
+
+<!--    <managed-bean>-->
+<!--        <managed-bean-name>resultsControllerBean</managed-bean-name>-->
+<!--        <managed-bean-class>example.beans.ResultsControllerBean</managed-bean-class>-->
+<!--        <managed-bean-scope>session</managed-bean-scope>-->
+<!--    </managed-bean>-->
+
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>goToMain</from-outcome>
+            <to-view-id>/main.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/main.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>goToIndex</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>
