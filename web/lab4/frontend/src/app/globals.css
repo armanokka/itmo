@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*overflow: hidden;*/
+
+  /* Fonts */
+  color: rgb(157, 151, 143);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Semibold";
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+  background: linear-gradient(to right, rgb(20, 20, 20), rgb(28, 28, 28), rgb(20, 20, 20));
+}
+
+dot {
+  position: absolute;
+  background: red;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  z-index: 10;
+}
+dot.hit {
+  background: green;
+}

@@ -1,0 +1,99 @@
+
+.axisBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.canvasBlock {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    height: 400px;
+    width: 400px;
+}
+
+.axisBlock {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.axis {
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 1px;
+    height: 600px;
+    background: rgb(157, 151, 143);
+}
+
+.stick.invisible {
+    background: none;
+}
+.stick {
+    background: rgb(157, 151, 143);
+    width: 15px;
+    height: 1px;
+}
+
+.rotated {
+    rotate: 90deg;
+}
+.mark {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    margin-left: 20px;
+    color: grey;
+    margin-top: -10px;
+    display: inline-flex;
+}
+
+
+.axis::after {
+    position: absolute;
+    content: '';
+    left: -4.5px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgb(157, 151, 143);
+}
+
+.y {
+    position: relative;
+    transform: rotate(90deg);
+    right: 50%;
+}
+.y stick {
+    rotate: 90deg;
+}
+
+
+.canvas {
+    position: absolute;
+    stroke-width: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+.y > .stick > .mark {
+    position: relative;
+    transform-origin: left top;
+    right: 40px;
+    top: 20px;
+    rotate: -90deg;
+}

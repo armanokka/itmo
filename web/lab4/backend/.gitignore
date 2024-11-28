@@ -1,0 +1,5 @@
+.env
+.idea
+.github
+postgres-data
+bin

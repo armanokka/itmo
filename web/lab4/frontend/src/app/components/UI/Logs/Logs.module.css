@@ -1,0 +1,83 @@
+.list {
+    background-image: radial-gradient(85.64% 100% at 50.59% 100%, rgb(233, 174, 128) 0px, rgb(233, 146, 242) 10%, rgb(90, 16, 242) 90%, rgb(90, 16, 242) 100%);
+    padding: 2px;
+    border-radius: 10px;
+    width: 60vh;
+    height: 80vh;
+}
+
+.list__inner {
+    background: #222222;
+    padding: 1rem;
+    border-radius: 10px;
+    height: 79.5vh;
+    overflow-y: auto;
+}
+
+.list__inner::-webkit-scrollbar {
+    display: none;
+}
+
+.selector_inner p:hover {
+    color: #9c978f;
+}
+
+.avatar {
+    max-width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.list__avatar_block {
+    display: inline-flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.list__item {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 4px;
+}
+
+.list__header {
+    margin-bottom: 2vh;
+    padding-bottom: 1vh;
+    border-bottom: 1px solid rgb(157, 151, 143);
+}
+
+.p {
+    width: fit-content;
+    font-size: 15px;
+    max-width: 50px;
+}
+
+.coords {
+    max-width: fit-content;
+}
+
+.slideIn {
+    opacity: 0; /* Start invisible */
+    transform: translateX(100%); /* Start off-screen to the right */
+    animation: slide-in 1s forwards; /* Apply animation */
+}
+
+.slideOut {
+    opacity: 0; /* Start invisible */
+    transform: translateX(100%); /* Start off-screen to the right */
+    animation: slide-in 1s backwards; /* Apply animation */
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0; /* Start transparent */
+        transform: translateX(100%); /* Start off-screen */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+        transform: translateX(0); /* End in original position */
+    }
+}
+

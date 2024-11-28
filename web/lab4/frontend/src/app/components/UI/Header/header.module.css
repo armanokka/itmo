@@ -1,0 +1,14 @@
+.header {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-bottom: solid 1px rgb(38, 38, 38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header_text {
+    font-size: 25px;
+}

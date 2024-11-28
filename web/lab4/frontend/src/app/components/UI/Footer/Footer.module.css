@@ -1,0 +1,77 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    text-align: center;
+    height: 7vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: rgb(21, 21, 21);
+    border-top: solid 1px rgb(38, 38, 38);
+    width: 100%;
+}
+
+.scroll {
+    position: relative;
+    width: 100vw;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent)
+}
+
+.scrollContainer {
+    overflow: visible;
+    height: 100%;
+    white-space: nowrap;
+    margin: 0;
+    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 0.5vw;
+    animation: scroll 20s infinite linear;
+}
+
+.scrollElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    margin: 0;
+    max-height: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    transition: 0.5s;
+}
+
+
+.color1 {
+    background: #25232F;
+}
+.color2 {
+    background: #5A10F2;
+}
+.color3 {
+    background: #201080;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
