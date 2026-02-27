@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+lab1,itmo.testing.lab1.math,CosFunction,0,77,1,9,0,18,1,6,0,2
+lab1,itmo.testing.lab1.domain,VogonJeltz,0,49,0,2,0,20,0,9,0,8
+lab1,itmo.testing.lab1.domain,SmileSpeed,0,21,0,0,0,4,0,1,0,1
+lab1,itmo.testing.lab1.domain,EmotionalState,0,21,0,0,0,4,0,1,0,1

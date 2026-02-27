@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VogonJeltz.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab1</a> &gt; <a href="index.source.html" class="el_package">itmo.testing.lab1.domain</a> &gt; <span class="el_source">VogonJeltz.java</span></div><h1>VogonJeltz.java</h1><pre class="source lang-java linenums">package itmo.testing.lab1.domain;
+
+public class VogonJeltz {
+    private boolean muscleSequenceForgotten;
+    private boolean rested;
+    private SmileSpeed smileSpeed;
+    private EmotionalState emotionalState;
+
+<span class="fc" id="L9">    public VogonJeltz() {</span>
+<span class="fc" id="L10">        this.muscleSequenceForgotten = false;</span>
+<span class="fc" id="L11">        this.rested = false;</span>
+<span class="fc" id="L12">        this.smileSpeed = SmileSpeed.NOT_SMILING;</span>
+<span class="fc" id="L13">        this.emotionalState = EmotionalState.NEUTRAL;</span>
+<span class="fc" id="L14">    }</span>
+
+    public void forgetCorrectMuscleSequence() {
+<span class="fc" id="L17">        this.muscleSequenceForgotten = true;</span>
+<span class="fc" id="L18">    }</span>
+
+    public void smile() {
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        if (muscleSequenceForgotten) {</span>
+<span class="fc" id="L22">            this.smileSpeed = SmileSpeed.VERY_SLOW;</span>
+<span class="fc" id="L23">            return;</span>
+        }
+<span class="fc" id="L25">        this.smileSpeed = SmileSpeed.NORMAL;</span>
+<span class="fc" id="L26">    }</span>
+
+    public void performRefreshingSeriesOfShoutsOnPrisoners() {
+<span class="fc" id="L29">        this.rested = true;</span>
+<span class="fc" id="L30">        this.emotionalState = EmotionalState.READY_FOR_SMALL_VILENESS;</span>
+<span class="fc" id="L31">    }</span>
+
+    public boolean isMuscleSequenceForgotten() {
+<span class="fc" id="L34">        return muscleSequenceForgotten;</span>
+    }
+
+    public boolean isRested() {
+<span class="fc" id="L38">        return rested;</span>
+    }
+
+    public SmileSpeed getSmileSpeed() {
+<span class="fc" id="L42">        return smileSpeed;</span>
+    }
+
+    public EmotionalState getEmotionalState() {
+<span class="fc" id="L46">        return emotionalState;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

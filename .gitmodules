@@ -1,0 +1,3 @@
+[submodule "os-course"]
+	path = os-course
+	url = https://github.com/armanokka/os-course.git

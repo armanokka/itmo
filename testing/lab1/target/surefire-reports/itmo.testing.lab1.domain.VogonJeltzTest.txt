@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: itmo.testing.lab1.domain.VogonJeltzTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in itmo.testing.lab1.domain.VogonJeltzTest
